@@ -19,7 +19,7 @@ MODEL_NAME = "gemini-2.5-flash"
 
 st.set_page_config(
     page_title=f"{APP_NAME} - Asisten Wisata Pintar",
-    page_icon="N",
+    page_icon="logo.svg",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -630,8 +630,8 @@ code { background: var(--code-bg) !important; color: var(--text) !important; bor
 /* App Specific Classes */
 .sidebar-brand { padding: 28px 24px 20px; }
 .brand-row { display: flex; align-items: center; gap: 14px; }
-.brand-mark { width: 40px; height: 40px; border-radius: 10px; display: grid; place-items: center; color: #ffffff !important; background: var(--accent) !important; font-weight: 700; font-size: 1.1rem; }
-.brand-name { font-size: 1.1rem; font-weight: 600; line-height: 1.2; color: var(--text) !important; }
+.brand-mark { width: 40px; height: 40px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+.brand-name { font-size: 1.15rem; font-weight: 700; line-height: 1.2; color: var(--text) !important; letter-spacing: -0.02em; }
 .brand-kicker { margin-top: 4px; color: var(--muted) !important; font-size: 0.8rem; }
 .sidebar-section { padding: 8px 16px 12px; }
 .sidebar-label { padding: 0 8px 8px; color: var(--subtle) !important; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; }
@@ -832,7 +832,13 @@ with st.sidebar:
         f"""
         <div class="sidebar-brand">
             <div class="brand-row">
-                <div class="brand-mark">N</div>
+                <div class="brand-mark">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="10" fill="color-mix(in srgb, var(--accent) 15%, transparent)" />
+                        <path d="M13 27V13L25 27V13" stroke="var(--accent)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="29" cy="27" r="3.5" fill="var(--warm)"/>
+                    </svg>
+                </div>
                 <div>
                     <div class="brand-name">Nusantara.ai</div>
                     <div class="brand-kicker">{html.escape(ui["brand_tagline"])}</div>
