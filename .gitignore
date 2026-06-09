@@ -1,8 +1,30 @@
+# 1. Environment & Rahasia (Paling Penting!)
 .env
-__pycache__/
-*.py[cod]
-*.log
 .streamlit/secrets.toml
+
+# 2. Python Virtual Environments (Jangan commit library/framework)
 .venv/
 venv/
 env/
+ENV/
+
+# 3. Python Cache & Compiled Files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 4. Logs (Log error aplikasi)
+*.log
+
+# 5. OS Generated Files (File sampah bawaan OS)
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# 6. IDE / Editor Folders (Konfigurasi editor lokal Anda)
+.vscode/
+.idea/
+*.swp
+
+# 7. Temporary / Scratch Files (File eksperimen sementara kita)
+patch.py
